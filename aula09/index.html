@@ -10,13 +10,17 @@
             color: white;
             font: normal 18pt Arial;
         }
+
+        div {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <h1>Iniciando estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
-    <div id='msg'>Clique em mim</div>
+    <div id='msg' onclick="google()">Clique em mim</div>
 
     <script>
         var corpo = window.document.body
@@ -31,7 +35,10 @@
 
         var d = window.document.querySelector('div#msg')
         d.style.background = 'blue'
-        d.innerText = 'Estou aguardando...'
+        
+        function google() {
+            window.open('https://engmaxsolucoes.com.br/', '_blank')
+        }
     </script>
 </body>
 </html>
