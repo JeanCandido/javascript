@@ -11,7 +11,12 @@ function verificar(){
         var idade = ano - Number(fano.value)
         var genero = ''
         var img = document.createElement('img')
+        var div = document.createElement('div')
+
+        div.setAttribute('id' , 'fundo')
+        div.style = 'background-color:#000000; width:250px; height: 250px; border-radius:50%; display: flex; flex-direction: column; align-items: center;'
         img.setAttribute('id', 'foto')
+        img.style = 'background-color:#0044FF; width:200px; height: 200px; border-radius:50%;'
         
         if (fsex[0].checked){
             genero = 'Homen'
@@ -38,6 +43,7 @@ function verificar(){
             }
         }
         res.innerHTML = `Voce é ${genero} e tem ${idade} anos`
-        res.appendChild(img)
+        res.appendChild(div)
+        div.appendChild(img)
     }
 }
