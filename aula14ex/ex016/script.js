@@ -40,9 +40,7 @@ function calcular(){
         passo = 1
     }
 
-    if (isNaN(inicio) || isNaN(fim) ){
-        pres.innerText = 'Impossivel Contar!'
-    }else if (inicio >= fim){
+    if (isNaN(inicio) || isNaN(fim) || inicio >= fim){
         pres.innerText = 'Impossivel Contar!'
     }else{
         pres.innerText = 'Contando:'
