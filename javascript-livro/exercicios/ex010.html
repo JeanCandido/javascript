@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+</head>
+<body>
+    <label for="nmat">Nota de Matematica: </label>
+    <input type="number" id="nmat"><br>
+    <label for="npor">Nota de Portugues: </label>
+    <input type="number" id="npor"><br>
+    <label for="res">Nota Média: </label>
+    <input type="number" readonly id="res" value="0"><br>
+    <input type="button" value="Calcular" onclick="calc()">
+
+    <div>Esperando...</div>
+
+    <script>
+        function calc(){
+            var nmat = Number(document.querySelector('#nmat').value)
+            var npor = Number(document.querySelector('#npor').value)
+            var res = document.querySelector('#res')
+
+            if(npor > 10 || nmat > 10){
+                alert('A nota maxima é 10')
+            }else{
+                res.value = (nmat + npor) / 2
+            }
+
+            if (res.value >= 7){
+                let dres = document.querySelector('div')
+                dres.innerHTML = 'Aprovado'
+            }else{
+                let dres = document.querySelector('div')
+                dres.innerHTML = 'Reprovado'
+            }
+
+            
+            
+        }
+    </script>
+</body>
+</html>
