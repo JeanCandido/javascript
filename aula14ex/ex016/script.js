@@ -15,6 +15,7 @@ function calcular(){
 
     if (isNaN(inicio) || isNaN(fim) || inicio >= fim){
         pres.innerText = 'Impossivel Contar!'
+        cres.innerText = ''
     }else{
         pres.innerText = 'Contando:'
 

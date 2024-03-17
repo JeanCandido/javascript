@@ -1,6 +1,6 @@
 function calcular(){
-    var num = document.querySelector('input#num').value
-    var list = document.querySelector('select#list')
+    var num = document.querySelector('#num').value
+    var list = document.querySelector('#list')
 
     if (num === '') {
         alert('O campo está vazio. Por favor, digite um número.');
@@ -12,7 +12,7 @@ function calcular(){
         for (var i = 1; i <= 10; i++){
             var option = document.createElement('option')
             option.value = num * i
-            option.textContent = num + ' x ' + i + ' = ' + (num * i)
+            option.textContent = `${num} x ${i} = ${(num * i)}` //num + ' x ' + i + ' = ' + (num * i)
             list.appendChild(option)
         }
     }
